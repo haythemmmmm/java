@@ -1,27 +1,30 @@
+import java.util.Arrays;
 import java.util.Scanner;
+
 public class ZooManagement {
-    int nbrCages = 20;
-    String zooName = "my zoo";
-
-    public static void main(String[] args) {
-        ZooManagement zoo = new ZooManagement();
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter zoo name: ");
-        zoo.zooName = scanner.nextLine();
-
-        while (zoo.zooName.isEmpty()) {
-            System.out.print("Zoo name cannot be empty. Enter again: ");
-            zoo.zooName = scanner.nextLine();
+        int nbrCages;
+        String zooName;
+        Animal[]animals=new Animal[25];
+        String city;
+        public ZooManagement(int nbrCages,String zooName,String city){
+            this.nbrCages=nbrCages;
+            this.zooName=zooName;
+            this.city=city;
+        }
+        public void displayZoo(){
+            System.out.println("le nom:"+zooName);
+            System.out.println("la ville:"+city);
+            System.out.println("nombre de cage"+nbrCages);
         }
 
-        System.out.print("Enter number of cages: ");
-        zoo.nbrCages = scanner.nextInt();
 
-        while (zoo.nbrCages <= 0) {
-            System.out.print("Enter a positive number: ");
-            zoo.nbrCages = scanner.nextInt();
-        }
-        System.out.println(zoo.zooName + " comporte " + zoo.nbrCages + " cages");
-        scanner.close();
+    @Override
+    public String toString() {
+        return "ZooManagement" +
+                "nbrCages=" + nbrCages +
+                ", zooName='" + zooName + '\'' +
+                ", animals=" + Arrays.toString(animals) +
+                ", city='" + city + '\'' +
+                '}';
     }
 }
