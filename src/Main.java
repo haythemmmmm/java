@@ -30,9 +30,18 @@ public class Main {
         k2.swim();
         k3.swim();
         k4.swim();
-
-
-
+        ZooManagement zoo2 = new ZooManagement(25, "frigua","hammet");
+        Dolphin d1 = new Dolphin("Mammifère", "Flipper", 8, true, "Océan");
+        Penguin p1 = new Penguin("Oiseau", "Pingu", 4, false, "Mer", 20.0f);
+        zoo.addAquaticAnimal(d1);
+        zoo.addAquaticAnimal(p1);
+        zoo.makeAquaticsSwim();
+        Penguin p2 = new Penguin("Oiseau", "Lolo", 5, false, "Océan", 50.0f);
+        zoo.addAquaticAnimal(p2);
+        System.out.println("Profondeur maximale : "+zoo.maxSwimmingDepth());
+        zoo.nbrdesanimals();
+        Dolphin d2 = new Dolphin("Mammifère", "Flipper", 8, true, "Océan");
+        System.out.println(d1.equals(d2));
 
     }
 }

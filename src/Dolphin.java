@@ -1,4 +1,4 @@
-public class Dolphin extends Aquatic{
+public non-sealed class Dolphin extends Aquatic{
     protected float swimmingSpeed;
     public Dolphin(String family, String name, int age, boolean isMammal,String habitat) {
         super(family, name, age, isMammal, habitat);
@@ -11,9 +11,8 @@ public class Dolphin extends Aquatic{
                 "swimmingSpeed=" + swimmingSpeed +
                 '}';
     }
+    @Override
     public void swim() {
-        System.out.println(
-                "This dolphin is swimming."
-        );
+        System.out.println("This dolphin is swimming.");
     }
 }

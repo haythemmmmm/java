@@ -1,4 +1,4 @@
-public class Terrestria extends Animal{
+public final class Terrestria extends Animal{
     int nbrLegs;
 
     public Terrestria(){

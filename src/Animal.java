@@ -1,8 +1,8 @@
-public class Animal {
-        private String family;
-        private String name;
-        private int age;
-        private boolean isMammal;
+sealed class Animal permits Aquatic,Terrestria {
+        public String family;
+        public String name;
+        public int age;
+        public boolean isMammal;
         public Animal(String family,String name,int age,boolean isMammal){
             this.family=family;
             this.name=name;
